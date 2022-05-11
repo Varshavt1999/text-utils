@@ -7,19 +7,14 @@ function TextForm(props) {
         let newText = text.toUpperCase();
         setText(newText)
     }
-
-
     const handleLoClick = () =>{
         let newText = text.toLowerCase();
         setText(newText)
     }
-
     const handleClearClick = () =>{
         let newText = "";
         setText(newText)
     }
-
-
     const handleOnChange = (e) =>{
         console.log("on change"+text);
         setText(e.target.value)
