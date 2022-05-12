@@ -24,7 +24,7 @@ function NavBar(props) {
             </div>
             <div className="form-check form-switch mx-4 ">
                 <input className={`form-check-input `} type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault" />
-                <label className={`form-check-label text-${props.mode === "light" ? "dark" : "light"}`} for="flexSwitchCheckDefault">{props.mode==="light" ? "Enable Dark mode" : "Disable Dark Mode"}</label>
+                <label className={`form-check-label text-${props.mode === "light" ? "dark" : "light"}`} htmlFor="flexSwitchCheckDefault">{props.mode==="light" ? "Enable Dark mode" : "Disable Dark Mode"}</label>
             </div>
         </div>
     </nav>

@@ -6,18 +6,22 @@ function TextForm(props) {
         console.log("uppercase was clicked");
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to Uppercase!","success")
     }
     const handleLoClick = () =>{
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to Lowercase!","success")
     }
     const handleClearClick = () =>{
         let newText = "";
         setText(newText)
+        props.showAlert("Text Cleared!","success")
     }
     const handleOnChange = (e) =>{
         console.log("on change"+text);
         setText(e.target.value)
+        
     }
     // const handleCopy = () =>{
     //     let text = document.getElementById("TextBox")
@@ -28,6 +32,7 @@ function TextForm(props) {
     const handleExtraSpaces = () =>{
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra Spaces removed!","success")
     }
 
     return (
